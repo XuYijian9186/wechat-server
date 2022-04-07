@@ -1,0 +1,12 @@
+.idea/
+*.iml
+token-server/target/
+heap.bin
+.scannerwork/
+
+.idea
+*.env
+*.pyc
+venv
+python/resource
+.scannerwork
