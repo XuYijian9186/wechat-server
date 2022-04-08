@@ -23,6 +23,7 @@ public class RedisConfig {
 //        Jackson2JsonRedisSerializer<> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
 //        mapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
 
+        
         return template;
     }
 
