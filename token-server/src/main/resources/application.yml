@@ -18,7 +18,7 @@ metadata:
 #    passwd: 7a91a9579135de9d42acab9741de0aac
 #    grant_type: client_credential
     user: wx60c471b7ee08a6fc
-    passwd: c9873fd97ec06d328b64ca99ba8c0b9c
+    passwd: e2e4a86965db878dc9ef9f6876257179
     grant_type: client_credential
 logging:
   file:

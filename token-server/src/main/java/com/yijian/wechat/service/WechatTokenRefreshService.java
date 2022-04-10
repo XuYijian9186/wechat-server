@@ -1,6 +1,7 @@
 package com.yijian.wechat.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class WechatTokenRefreshService {
 
     @Autowired
+    @Qualifier("stringRedisTemplate")
     private RedisTemplate redisTemplate;
 
     @Autowired
