@@ -1,4 +1,4 @@
-package com.yijian.wechat.bean;
+package com.yijian.wechat.frame.bean.request;
 
 import lombok.Data;
 
@@ -6,7 +6,7 @@ import lombok.Data;
  * Created by yijian on 2017/11/14.
  */
 @Data
-public class DataInstance {
+public class BasicMessageInstance {
 
     private String ToUserName;
     private String FromUserName;

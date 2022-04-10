@@ -1,24 +1,19 @@
 package com.yijian.wechat.controller;
 
-import com.yijian.wechat.bean.DataInstance;
+import com.yijian.wechat.frame.bean.request.BasicMessageInstance;
 import com.yijian.wechat.service.DataConvertService;
 import com.yijian.wechat.service.WechatConnectService;
 import lombok.extern.slf4j.Slf4j;
-import org.dom4j.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 @Slf4j
 public class WechatConnectController {
@@ -51,7 +46,7 @@ public class WechatConnectController {
 
         //获取inputStream中的xml报文
         try {
-            DataInstance instance = dataConvertService.getPostParamter(request.getInputStream());
+            BasicMessageInstance instance = dataConvertService.getPostParamter(request.getInputStream());
 
             //回复消息
             String s = dataConvertService.buildResponseContent(request, instance);

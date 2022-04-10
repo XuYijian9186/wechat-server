@@ -1,7 +1,6 @@
 package com.yijian.wechat.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yijian.wechat.bean.DataInstance;
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -9,11 +8,9 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
 import javax.servlet.ServletOutputStream;
-import javax.servlet.ServletRegistration;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Slf4j

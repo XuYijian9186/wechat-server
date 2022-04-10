@@ -11,8 +11,11 @@ spring:
 wechat:
   getToken:
     url: https://api.weixin.qq.com/cgi-bin/token?grant_type=${metadata.grant_type}&appid=${metadata.user}&secret=${metadata.passwd}
-  service:
+  connect:
     token: yanwuxu
+  menu:
+    add:
+      url: https://api.weixin.qq.com/cgi-bin/menu/create
 metadata:
 #    user: wxae89e768c22d0fb9
 #    passwd: 7a91a9579135de9d42acab9741de0aac

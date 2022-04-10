@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Slf4j
 public class WechatConnectService {
 
-    @Value("${wechat.service.token}")
+    @Value("${wechat.connect.token}")
     private String token;
 
     public Boolean verifyParamter(String signature, String timestamp, String nonce, String echostr) {

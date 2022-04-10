@@ -1,7 +1,7 @@
 package com.yijian.wechat.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yijian.wechat.bean.DataInstance;
+import com.yijian.wechat.frame.bean.request.BasicMessageInstance;
 import com.yijian.wechat.util.DataConvertUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +19,11 @@ public class DataConvertService {
     @Autowired
     private ObjectMapper mapper;
 
-    public DataInstance getPostParamter(ServletInputStream inputStream) {
+    public BasicMessageInstance getPostParamter(ServletInputStream inputStream) {
         String s = DataConvertUtil.inputStreamToString(inputStream);
         String jsonString = DataConvertUtil.xmlContentResolve(s);
         try {
-            DataInstance dataInstance = mapper.readValue(jsonString, DataInstance.class);
+            BasicMessageInstance dataInstance = mapper.readValue(jsonString, BasicMessageInstance.class);
             return dataInstance;
         } catch (IOException e) {
             log.error(e.getMessage());
@@ -31,8 +31,8 @@ public class DataConvertService {
         }
     }
 
-    public String buildResponseContent(HttpServletRequest request, DataInstance instance) {
-        DataInstance dataInstance = new DataInstance();
+    public String buildResponseContent(HttpServletRequest request, BasicMessageInstance instance) {
+        BasicMessageInstance dataInstance = new BasicMessageInstance();
         dataInstance.setFromUserName(instance.getToUserName());
         dataInstance.setToUserName(instance.getFromUserName());
         dataInstance.setMsgType("text");
