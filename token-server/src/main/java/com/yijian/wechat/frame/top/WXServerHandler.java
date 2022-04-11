@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public interface WXServerHandler {
 
-    BasicResponseInstance execute(String url,String token,Object param) throws IOException;
+    BasicResponseInstance execute(Object param) throws Exception;
 
+    BasicResponseInstance execute() throws Exception;
 }

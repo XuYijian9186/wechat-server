@@ -16,6 +16,8 @@ wechat:
   menu:
     add:
       url: https://api.weixin.qq.com/cgi-bin/menu/create
+    del:
+      url: https://api.weixin.qq.com/cgi-bin/menu/delete
 metadata:
 #    user: wxae89e768c22d0fb9
 #    passwd: 7a91a9579135de9d42acab9741de0aac
@@ -37,4 +39,3 @@ logging:
             %msg%n'
     file: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15}.%M\(%line\)-
             %msg%n'
-

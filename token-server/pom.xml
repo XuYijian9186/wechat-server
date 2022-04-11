@@ -63,6 +63,14 @@
             <scope>test</scope>
             <version>4.13</version>
         </dependency>
+
+
+<!--        读源码用-->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-spring-boot-starter</artifactId>
+            <version>2.1.1</version>
+        </dependency>
     </dependencies>
 
 
